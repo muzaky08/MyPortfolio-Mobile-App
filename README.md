@@ -619,58 +619,6 @@ eas build --platform android --profile preview --local
 
 ---
 
-## Kredensial Login Demo
-
-| Field | Nilai |
-|-------|-------|
-| **Username (NIM)** | `23050951` |
-| **Password** | `MyP@ssw0rd` |
-
-> Password sudah memenuhi semua aturan keamanan (8+ karakter, huruf besar/kecil, angka, simbol).
-
-Kredensial didefinisikan di `src/constants/auth.ts`.
-
----
-
-## Catatan untuk Presentasi
-
-### Poin yang Bisa Dijelaskan ke Dosen
-
-1. **Kenapa React Native?** — Satu codebase untuk Android & iOS, development cepat, komunitas besar.
-2. **Kenapa Expo?** — Mempercepat development, tidak perlu setup Android Studio untuk testing awal.
-3. **Kenapa AsyncStorage?** — Data profil tidak perlu server/backend; aplikasi bisa offline penuh kecuali halaman Resep.
-4. **Pemisahan Read/Write** — UX lebih bersih; user tidak bingung mana halaman tampilan vs edit.
-5. **Context API** — State management sederhana tanpa Redux (cukup untuk skala project ini).
-6. **Validasi Login** — Mensimulasikan standar keamanan password di aplikasi nyata.
-7. **Integrasi API** — Halaman Resep menunjukkan kemampuan fetch data dari internet (REST API).
-8. **Dark Mode** — Preferensi pengguna disimpan persisten, bukan hanya state sementara.
-9. **TypeScript** — Type safety mengurangi bug saat project berkembang.
-10. **EAS Build** — Modern workflow untuk distribusi aplikasi mobile tanpa konfigurasi Gradle manual.
-
-### Diagram Alur Data (untuk slide)
-
-```
-[User Input Settings]
-        ↓
-[AppDataContext state]
-        ↓
-[saveAppData() → AsyncStorage]
-        ↓
-[Profile / Education / Activity Screen membaca data yang sama]
-```
-
-### Skema Warna
-
-| Nama | Hex | Penggunaan |
-|------|-----|------------|
-| Primary | `#0052cc` | Header, tombol, aksen |
-| Background | `#f5f5f5` | Latar belakang light mode |
-| Background Dark | `#121212` | Latar belakang dark mode |
-| Success | `#16a34a` | Validasi sukses, tombol simpan |
-| Error | `#dc2626` | Validasi gagal, logout |
-
----
-
 ## Lisensi
 
 Proyek ini dibuat untuk keperluan akademik (Tugas Akhir Pemrograman Mobile — UYM). Hak cipta milik pengembang.
